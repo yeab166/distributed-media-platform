@@ -37,4 +37,35 @@ public class StorageService {
             throw new PlatformException("Could not initialize storage: " + e.getMessage());
         }
     }
-}
+    
+public String store(MultipartFile file) {
+        try {
+            if (file.isEmpty()) {
+                throw new PlatformException("Failed to store empty file.");
+            }
+            String extension = getFileExtension(file.getOriginalFilename());
+            String fileName = UUID.randomUUID().toString() + extension;
+            Path targetLocation = this.originalPath.resolve(fileName);
+            Files.copy(file.getInputStream(), targetLocation);
+            return targetLocation.toString();
+        } catch (IOException e) {
+            throw new PlatformException("Failed to store file: " + e.getMessage());
+        }
+    }
+    public Path load(String filename) {
+        return originalPath.resolve(filename);
+    }
+    public Path getOriginalPath(String fileName) {
+        return originalPath.resolve(fileName);
+    }
+
+    public Path getProcessedPath(String fileName) {
+        return processedPath.resolve(fileName);
+    }
+
+    private String getFileExtension(String fileName) {
+        if (fileName == null || fileName.lastIndexOf(".") == -1) {
+            return "";
+        }
+        return fileName.substring(fileName.lastIndexOf("."));
+    }
