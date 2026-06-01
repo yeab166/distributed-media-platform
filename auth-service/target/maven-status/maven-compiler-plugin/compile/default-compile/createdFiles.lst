@@ -1,0 +1,16 @@
+com\platform\auth\config\GlobalExceptionHandler.class
+com\platform\auth\model\User$UserBuilder.class
+com\platform\auth\config\JwtAuthenticationFilter.class
+com\platform\auth\AuthServiceApplication.class
+com\platform\auth\dto\AuthRequest.class
+com\platform\auth\model\User.class
+com\platform\auth\repository\UserRepository.class
+com\platform\auth\config\SecurityConfig.class
+com\platform\auth\config\ApplicationConfig.class
+com\platform\auth\dto\AuthResponse.class
+com\platform\auth\controller\UserController.class
+com\platform\auth\service\JwtService.class
+com\platform\auth\dto\RegisterRequest.class
+com\platform\auth\controller\AuthController.class
+com\platform\auth\dto\AuthResponse$AuthResponseBuilder.class
+com\platform\auth\service\AuthService.class
