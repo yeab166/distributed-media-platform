@@ -1,4 +1,3 @@
-com\platform\auth\config\GlobalExceptionHandler.class
 com\platform\auth\model\User$UserBuilder.class
 com\platform\auth\config\JwtAuthenticationFilter.class
 com\platform\auth\AuthServiceApplication.class
