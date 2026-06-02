@@ -1,0 +1,5 @@
+**/target/
+media-service/uploads/original/*
+media-service/uploads/processed/*
+!media-service/uploads/original/.gitkeep
+!media-service/uploads/processed/.gitkeep
